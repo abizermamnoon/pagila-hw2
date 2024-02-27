@@ -17,4 +17,4 @@ GROUP BY
         EXTRACT (YEAR FROM rental_date),
         EXTRACT (MONTH FROM rental_date)
     )
-order by EXTRACT (YEAR FROM rental_date);
+order by EXTRACT (YEAR FROM rental_date), EXTRACT (MONTH FROM rental_date), SUM (amount);
